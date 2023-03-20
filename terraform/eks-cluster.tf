@@ -18,9 +18,12 @@ module "eks" {
         dev = {
             min_size = 1
             max_size = 3
-            desired_size = 2
+            desired_size = 1
 
             instance_types = ["t2.small"]
         }
     }
+    depends_on = [
+    aws_route53_record.site_domain,
+    ]
 }
