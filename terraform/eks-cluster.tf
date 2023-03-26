@@ -23,7 +23,5 @@ module "eks" {
             instance_types = ["t2.small"]
         }
     }
-    depends_on = [
-    aws_route53_record.site_domain,
-    ]
+
 }
